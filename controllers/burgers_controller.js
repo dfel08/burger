@@ -13,7 +13,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-    burger.insertOne(["name", "devoured"], [req.body.name, req.body.devoured], function (result) {
+    burger.insertOne([req.body.burger_name, req.body.devoured], function (result) {
         res.json({ id: result.insertId });
     });
 });
@@ -27,7 +27,7 @@ router.put("/api/burgers/:id", function (req, res) {
         devoured: req.body.devoured
     }, condition, function (results) {
         if (results.changedRows === 0) {
-            return res.status(404).end();
+            res.status(404).end();
         } else {
             res.status(200).end();
         }

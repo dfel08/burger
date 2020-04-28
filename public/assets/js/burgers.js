@@ -6,7 +6,7 @@ $(function() {
             devoured: newDevoured
         };
 
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(
@@ -20,8 +20,8 @@ $(function() {
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
         var newBurger = {
-            name: $("bu").val().trim(),
-            devoured: $("[name=devoured]:checked").val().trim()
+            burger_name: $("#bu").val().trim(),
+            devoured: $("[burger_name=devoured]:checked").val()
         };
 
         $.ajax("api/burgers", {
