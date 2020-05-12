@@ -1,5 +1,5 @@
 # burger
-Project done while attending UC-Berkeley Extension Coding Bootcamp. This is an app is able to create and delete notes on the browser.
+Project done while attending UC-Berkeley Extension Coding Bootcamp. This is an app is able to create, delete, and "devour" burgers on a database.
 
 ## Getting Started
 
